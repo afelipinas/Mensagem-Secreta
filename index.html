@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Codificador e Decodificador de Mensagem</title>
+</head>
+<body onload="inicio()">
+<main>
+    <div class="box-esquerda"></div>
+    <div class="box-meio">
+        <div>
+            <div>
+            <h1>Codificador e Decodificador de Mensagem</h1>
+            </div>
+            <div>                
+                <textarea id="entradaTexto" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>           
+        </div>
+        <div>
+            <select id="select">
+                <option value="choice">Escolha o tipo</option>
+                <option value="cifracesar">Cifra de César</option>
+                <option value="base">Base64</option>
+            </select>
+        </div>
+        <div id="incremento">
+            <div>
+                 <input id="incremecesar" type="number" placeholder="Escolha o número" min="1" max="26"></input>
+            </div>
+            <div>
+                <input type="radio" name="selecao" id="botcod" >Codificar</input>
+                <input type="radio" name="selecao" id="botdecod" >Decodificar</input><br>
+                <input id="botaoEnviar" type="submit" value="Selecione">
+            </div>
+            <div>
+                <textarea type="text" id="saidaTexto"></textarea>
+            </div>
+        </div>
+            
+        <div id="base">
+            <div>
+                <input type="radio" name="selecao" id="codeBase" >Codificar</input>
+                <input type="radio" name="selecao" id="decodBase" >Decodificar</input><br>
+                <input id="submitBase" type="submit" value="Selecione">
+            </div>
+            <div>
+                <textarea type="text" id="saidaBase"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="box-direita"></div>
+</main>
+    
+<script src="./arq.js"></script>
+<script src="./bts.js"></script>
+</body>
+</html>
+
+
+
+<!-- <input type="number" placeholder="Escolha o número" min="1" max="25"> -->
+
+
+<!--        <div>
+            <input type="radio" name="selecao" class="botcod" >Codificar</input>
+            <input type="radio" name="selecao" class="botdecod" >Decodificar</input><br>
+            <input class="botaoEnviar" type="submit" value="Selecione">
+        </div>
+        <div>
+            <textarea id="saidaTexto"></textarea>
+        </div>
+
+-->
