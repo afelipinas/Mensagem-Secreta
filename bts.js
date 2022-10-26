@@ -8,9 +8,31 @@ var saidaTexto = document.getElementById('saidaTexto')
 var submit = document.getElementById('submitBase')
 var copyCesar = document.getElementById('botcopyc')
 var copyBase = document.getElementById('botcopyb')
+let botCod = document.getElementById('botcod')
+let botDecod = document.getElementById('botdecod')
+let botCBase = document.getElementById('codeBase')
+let botDBase = document.getElementById('decodBase')
 
 
+botCod.addEventListener('click', function(){
+    botaoEnviar.style.display = 'block';
+    botaoEnviar.value = 'Codificar Mensagem';
+})
 
+botDecod.addEventListener('click', function(){
+    botaoEnviar.style.display = 'block';
+    botaoEnviar.value = 'Decodificar Mensagem';
+})
+
+botCBase.addEventListener('click', function(){
+    submit.style.display = 'block';
+    submit.value = 'Codificar Mensagem';
+})
+
+botDBase.addEventListener('click', function(){
+    submit.style.display = 'block';
+    submit.value = 'Decodificar Mensagem';
+})
 
 function Codificar(){
     var texto = document.getElementById('entradaTexto').value;
@@ -61,8 +83,8 @@ function Decodificar(){
 
 botaoEnviar.addEventListener('click', function(e){
     e.preventDefault();
-    let botCod = document.getElementById('botcod')
-    let botDecod = document.getElementById('botdecod')
+   // let botCod = document.getElementById('botcod')
+    //let botDecod = document.getElementById('botdecod')
     if(botCod.checked){
         return Codificar()
     }else if(botDecod.checked){
@@ -91,8 +113,8 @@ function DBase(){
 
 submit.addEventListener('click', function(e){
     e.preventDefault();
-    var botCBase = document.getElementById('codeBase')
-    var botDBase = document.getElementById('decodBase')
+    //let botCBase = document.getElementById('codeBase')
+    ///let botDBase = document.getElementById('decodBase')
     if(botCBase.checked){
         return CBase()
     }else if(botDBase.checked){
