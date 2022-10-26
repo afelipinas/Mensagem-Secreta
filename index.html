@@ -10,14 +10,27 @@
 </head>
 <body onload="inicio()">
 <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-0 col-md-2"></div>
+            <div class="col-12 col-md-8">
+                <div>
+                    <h1>Codificador e Decodificador de Mensagem</h1>
+                </div>
+                <div>
+                    <h4>Para usar o Codificador/Decodificador basta escrever sua mensagem no campo abaixo e selecionar a opção de encriptação.<br>Há dois métodos: a <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Cifra de César</a> e a <a href="https://marquesfernandes.com/self/o-que-e-base64-para-que-serve-e-como-funciona/" target="_blank">Base64</a>. Para conhecê-los basta clicar em seus respectivos nomes.</h4>
+                </div>
+
+            </div>
+            <div class="col-0 col-md-2"></div>
+        </div>
+    </div>
 <div class="container">
     <div class="row">
     <div class="col-0 col-md-2"></div>
     <div class="col-12 col-md-8">
         <div>
-            <div>
-            <h1>Codificador e Decodificador de Mensagem</h1>
-            </div>
+            
             <div>                
                 <textarea id="entradaTexto" placeholder="Escreva sua mensagem aqui..."></textarea>
             </div>           
@@ -41,6 +54,7 @@
             <div>
                 <textarea type="text" id="saidaTexto"></textarea>
             </div>
+            <div id="botcopyc"></div>
         </div>
             
         <div id="base">
@@ -52,6 +66,7 @@
             <div>
                 <textarea type="text" id="saidaBase"></textarea>
             </div>
+            <div id="botcopyb"></div>
 
         </div>
 

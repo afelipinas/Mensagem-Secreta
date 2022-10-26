@@ -6,6 +6,8 @@ var alfabeto = "abcdefghijklmnopqrstuvwxyz"
 var botaoEnviar = document.getElementById('botaoEnviar')
 var saidaTexto = document.getElementById('saidaTexto')
 var submit = document.getElementById('submitBase')
+var copyCesar = document.getElementById('botcopyc')
+var copyBase = document.getElementById('botcopyb')
 
 
 
@@ -27,6 +29,7 @@ function Codificar(){
             }
         }
         saidaTexto.value = resultado;
+        copyCesar.innerHTML = '<button class="btn-copiar" id="copiar" onclick="copiarC()">Copiar</button>'
 
     }
 }
@@ -48,6 +51,7 @@ function Decodificar(){
             }
         }
         saidaTexto.value = resultado;
+        copyCesar.innerHTML = '<button class="btn-copiar" id="copiar" onclick="copiarC()">Copiar</button>'
 
     }
 }
@@ -73,6 +77,7 @@ function CBase(){
     var texto = document.getElementById('entradaTexto').value;
     var result = btoa(texto);
     saidaTexto.value = result;
+    copyBase.innerHTML = '<button class="btn-copiar" id="copiar" onclick="copiarB()">Copiar</button>'
 }
 
 function DBase(){
@@ -80,6 +85,7 @@ function DBase(){
     var texto = document.getElementById('entradaTexto').value;
     var result = atob(texto);
     saidaTexto.value = result;
+    copyBase.innerHTML = '<button class="btn-copiar" id="copiar" onclick="copiarB()">Copiar</button>'
 }
 
 
@@ -95,5 +101,17 @@ submit.addEventListener('click', function(e){
     }
 })
 
+function copiarC(){
+    let textcopC = document.getElementById('saidaTexto');
+    textcopC.select();
+    document.execCommand('copy');
+    alert("Texto Copiado")
+}
 
+function copiarB(){
+    let textcopB = document.getElementById('saidaBase');
+    textcopB.select();
+    document.execCommand('copy');
+    alert("Texto Copiado")
+}
 
